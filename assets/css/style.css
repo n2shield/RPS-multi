@@ -116,7 +116,7 @@ p {
 .holder-box, .holder-messages {
 	position: relative;
 	width: 61vw;
-	height: 15vw;
+	height: 20vw;
 	margin: 2vw auto;
 }
 
@@ -348,8 +348,8 @@ p {
 	}
 
 	.score {
-		bottom: 2.5vw;
-		height: 2vw;
+		bottom: 8vw;
+		height: 4vw;
 	}
 
 	p {

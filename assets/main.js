@@ -189,7 +189,7 @@ $(document).on('ready', function() {
 				$('.choices' + player).append($i);
 			}
 			// Listen for choice
-			$(document).one('mousedown','i', game.setChoice);
+			$(document).on('click','i', game.setChoice);
 		},
 		setChoice: function() {
 			// Send selection to database

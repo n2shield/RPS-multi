@@ -19,6 +19,7 @@ $(document).on('ready', function() {
 	chatRef.onDisconnect().remove();
 
 
+
 	// Game Object
 	var game = {
 		listeners: function() {
@@ -189,7 +190,7 @@ $(document).on('ready', function() {
 				$('.choices' + player).append($i);
 			}
 			// Listen for choice
-			$(document).on('click','i', game.setChoice);
+			$(document).one('mousedown','i', game.setChoice);
 		},
 		setChoice: function() {
 			// Send selection to database
@@ -389,12 +390,12 @@ $(document).on('ready', function() {
 				chat.sendMessage();
 			}
 		},
-		sendMessage: function() {
-			var obj = {};
-			obj['name'] = name[player];
-			obj['message'] = chat.message;
-			chatRef.push(obj);
-		},
+        sendMessage: function() {
+            var obj = {};
+            obj['name'] = name[player];
+            obj['message'] = chat.message;
+            chatRef.push(obj);
+    },
 		sendDisconnect: function(key) {
 			var obj = {};
 			obj['name'] = name[key];
